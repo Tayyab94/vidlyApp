@@ -18,6 +18,9 @@ namespace vidlyApp.Models
         [Required]
         [StringLength(255)]
         public string Name { get; set; }
+
+        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode =true)]
+        public DateTime? BithDate { get; set; }
         public bool IsSubscribeToNewsletter { get; set; }
 
         public virtual MemberShiptype MemberShiptype { get; set; }

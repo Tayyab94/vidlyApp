@@ -3,15 +3,36 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Data.Entity;
 using vidlyApp.Models;
 
 namespace vidlyApp.Controllers
 {
     public class MovieController : Controller
     {
+        private DemoContext _Context;
+
+        public MovieController()
+        {
+            _Context = new DemoContext();
+        }
+
+        protected override void Dispose(bool disposing)
+        {
+            _Context.Dispose();   
+        }
         // GET: Movie
+        public ActionResult Index(Customer o)
+        {
+            DemoContext _context = new DemoContext();
+            var moviesList = _context.Movies.Include(a => a.Genre).ToList();
+
+            return View(moviesList);
+
+        }
+
         [HttpGet]
-        public ActionResult Index()
+        public ActionResult Index1()
         {
        
            
@@ -19,7 +40,7 @@ namespace vidlyApp.Controllers
         }
 
         [HttpPost]
-        public ActionResult Index(Customer o)
+        public ActionResult Index1(Customer o)
         {
             DemoContext _context = new DemoContext();
             Customer oa = new Customer();
@@ -32,13 +53,10 @@ namespace vidlyApp.Controllers
 
         }
 
-        public ActionResult Eid(int id)
+        public ActionResult Details(int id)
         {
-            if(id==0)
-            {
-                id = 2;
-            }
-            return Content(id.ToString());
+            var MovieDetail = _Context.Movies.Include(x => x.Genre).SingleOrDefault(x => x.Id == id);
+            return View(MovieDetail);
         }
     }
 }

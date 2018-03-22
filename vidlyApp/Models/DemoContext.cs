@@ -16,6 +16,8 @@ namespace vidlyApp.Models
      
         public DbSet<Customer> Cuttomers { get; set; }
         public DbSet<Movie> Movies { get; set; }
+        public DbSet<Genre> Genres { get; set;
+        }
       
     }
 }

@@ -193,9 +193,34 @@
     <Compile Include="Migrations\201803212017546_ApplyAnnotationToCustomerName.Designer.cs">
       <DependentUpon>201803212017546_ApplyAnnotationToCustomerName.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201803221853517_AddBithdateCustomer.cs" />
+    <Compile Include="Migrations\201803221853517_AddBithdateCustomer.Designer.cs">
+      <DependentUpon>201803221853517_AddBithdateCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803221858055_AddNameIntoMemeberShip.cs" />
+    <Compile Include="Migrations\201803221858055_AddNameIntoMemeberShip.Designer.cs">
+      <DependentUpon>201803221858055_AddNameIntoMemeberShip.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803221921240_AddBirthdayFormetInCustomer.cs" />
+    <Compile Include="Migrations\201803221921240_AddBirthdayFormetInCustomer.Designer.cs">
+      <DependentUpon>201803221921240_AddBirthdayFormetInCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803222019369_AddGenreTable.cs" />
+    <Compile Include="Migrations\201803222019369_AddGenreTable.Designer.cs">
+      <DependentUpon>201803222019369_AddGenreTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803222020271_PopulateGenreTable.cs" />
+    <Compile Include="Migrations\201803222020271_PopulateGenreTable.Designer.cs">
+      <DependentUpon>201803222020271_PopulateGenreTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803222104443_NewFieldAddedInMovies.cs" />
+    <Compile Include="Migrations\201803222104443_NewFieldAddedInMovies.Designer.cs">
+      <DependentUpon>201803222104443_NewFieldAddedInMovies.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\DemoContext.cs" />
+    <Compile Include="Models\Genre.cs" />
     <Compile Include="Models\MemberShiptype.cs" />
     <Compile Include="Models\Movie.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -237,9 +262,11 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Movie\Index.cshtml" />
+    <Content Include="Views\Movie\Index1.cshtml" />
     <Content Include="Views\Customer\Index.cshtml" />
     <Content Include="Views\Customer\Details.cshtml" />
+    <Content Include="Views\Movie\Index.cshtml" />
+    <Content Include="Views\Movie\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -281,6 +308,24 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201803212017546_ApplyAnnotationToCustomerName.resx">
       <DependentUpon>201803212017546_ApplyAnnotationToCustomerName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803221853517_AddBithdateCustomer.resx">
+      <DependentUpon>201803221853517_AddBithdateCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803221858055_AddNameIntoMemeberShip.resx">
+      <DependentUpon>201803221858055_AddNameIntoMemeberShip.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803221921240_AddBirthdayFormetInCustomer.resx">
+      <DependentUpon>201803221921240_AddBirthdayFormetInCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803222019369_AddGenreTable.resx">
+      <DependentUpon>201803222019369_AddGenreTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803222020271_PopulateGenreTable.resx">
+      <DependentUpon>201803222020271_PopulateGenreTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803222104443_NewFieldAddedInMovies.resx">
+      <DependentUpon>201803222104443_NewFieldAddedInMovies.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
