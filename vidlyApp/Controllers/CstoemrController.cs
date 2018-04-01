@@ -45,35 +45,22 @@ namespace vidlyApp.Controllers
         }
 
         [HttpPost]
-        public ActionResult AddCurtomers(NewCustomerViewModel obj)
+        public ActionResult AddCurtomers(Customer obj)
         {
-            if(!ModelState.IsValid)
+        
+            if(obj.Id==0)
             {
-                var ViewModel = new NewCustomerViewModel
-                {
-                    Customer = obj.Customer,
-                    MemberShiptypes = _context.MemberShipTypes.ToList()
-                };
-                return View("CustomerForm", ViewModel);
-            }
-            if(obj.Customer.Id==0)
-            {
-                Customer objCus = new Customer();
-                objCus.Name = obj.Customer.Name;
-                objCus.BithDate = obj.Customer.BithDate;
-                objCus.MemberShiptypeId = obj.Customer.MemberShiptypeId;
 
-                objCus.IsSubscribeToNewsletter = obj.Customer.IsSubscribeToNewsletter;
-                _context.cutomers.Add(objCus);
+                _context.cutomers.Add(obj);
                
             }
             else
             {
-                var customer = _context.cutomers.Single(x => x.Id == obj.Customer.Id);
-                customer.Name = obj.Customer.Name;
-                customer.BithDate = obj.Customer.BithDate;
-                customer.MemberShiptype = new MemberShiptype { Id = Convert.ToInt32(obj.MemberShiptypes) };
-                customer.IsSubscribeToNewsletter = obj.Customer.IsSubscribeToNewsletter;
+                var customer = _context.cutomers.Single(x => x.Id == obj.Id);
+                customer.Name = obj.Name;
+                customer.BithDate = obj.BithDate;
+                customer.MemberShiptype = new MemberShiptype { Id = Convert.ToInt32(obj) };
+                customer.IsSubscribeToNewsletter = obj.IsSubscribeToNewsletter;
                 _context.cutomers.Add(customer);
             }
             _context.SaveChanges();
