@@ -14,10 +14,12 @@ namespace vidlyApp.Models
 
         }
      
-        public DbSet<Customer> Cuttomers { get; set; }
+        public DbSet<Customer> cutomers { get; set; }
+
         public DbSet<Movie> Movies { get; set; }
         public DbSet<Genre> Genres { get; set;
         }
+        public DbSet<MemberShiptype> MemberShipTypes { get; set; }
       
     }
 }

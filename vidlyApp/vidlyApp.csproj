@@ -154,10 +154,9 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Controllers\CustomerController.cs" />
-    <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\MovieController.cs" />
+    <Compile Include="Controllers\CstoemrController.cs" />
     <Compile Include="DataViewModel\DVModel.cs" />
+    <Compile Include="DataViewModel\NewCustomerViewModel.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -217,6 +216,26 @@
     <Compile Include="Migrations\201803222104443_NewFieldAddedInMovies.Designer.cs">
       <DependentUpon>201803222104443_NewFieldAddedInMovies.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201803252139054_MemberShipIDAdd.cs" />
+    <Compile Include="Migrations\201803252139054_MemberShipIDAdd.Designer.cs">
+      <DependentUpon>201803252139054_MemberShipIDAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803252141183_RemoveMemberShipId.cs" />
+    <Compile Include="Migrations\201803252141183_RemoveMemberShipId.Designer.cs">
+      <DependentUpon>201803252141183_RemoveMemberShipId.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803312032361_RemoceCustomerTable.cs" />
+    <Compile Include="Migrations\201803312032361_RemoceCustomerTable.Designer.cs">
+      <DependentUpon>201803312032361_RemoceCustomerTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803312038409_NewCustomerTable.cs" />
+    <Compile Include="Migrations\201803312038409_NewCustomerTable.Designer.cs">
+      <DependentUpon>201803312038409_NewCustomerTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803312057138_NewCustomerTable1.cs" />
+    <Compile Include="Migrations\201803312057138_NewCustomerTable1.Designer.cs">
+      <DependentUpon>201803312057138_NewCustomerTable1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\DemoContext.cs" />
@@ -267,6 +286,9 @@
     <Content Include="Views\Customer\Details.cshtml" />
     <Content Include="Views\Movie\Index.cshtml" />
     <Content Include="Views\Movie\Details.cshtml" />
+    <Content Include="Views\Customer\AddCurtomers.cshtml" />
+    <Content Include="Views\Cstoemr\CustomerForm.cshtml" />
+    <Content Include="Views\Cstoemr\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -326,6 +348,21 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201803222104443_NewFieldAddedInMovies.resx">
       <DependentUpon>201803222104443_NewFieldAddedInMovies.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803252139054_MemberShipIDAdd.resx">
+      <DependentUpon>201803252139054_MemberShipIDAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803252141183_RemoveMemberShipId.resx">
+      <DependentUpon>201803252141183_RemoveMemberShipId.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803312032361_RemoceCustomerTable.resx">
+      <DependentUpon>201803312032361_RemoceCustomerTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803312038409_NewCustomerTable.resx">
+      <DependentUpon>201803312038409_NewCustomerTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803312057138_NewCustomerTable1.resx">
+      <DependentUpon>201803312057138_NewCustomerTable1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

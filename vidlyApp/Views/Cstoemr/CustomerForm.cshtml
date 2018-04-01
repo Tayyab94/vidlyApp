@@ -1,0 +1,38 @@
+﻿@*@model vidlyApp.Models.Customer*@
+
+@model vidlyApp.DataViewModel.NewCustomerViewModel
+@{
+    ViewBag.Title = "New";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>New</h2>
+<h2>AddCurtomers</h2>
+@using (Html.BeginForm("AddCurtomers", "Cstoemr", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+    <div class="form-group">
+        <label class="control-label">Name</label>
+        @Html.TextBoxFor(x => x.Customer.Name, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(x => x.Customer.BithDate)
+        @Html.TextBoxFor(x => x.Customer.BithDate,"{0:d MMM yyyy}", new { @class = "form-control" })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(x => x.Customer.MemberShiptype)
+        @Html.DropDownListFor(x => x.Customer.MemberShiptype, new SelectList(Model.MemberShiptypes, "Id", "Name"), "-Select MemberShip", new { @class = "form-control" })
+    </div>
+    @*<div class="form-group">
+        @Html.LabelFor(x=>x.MemberShiptype)
+        @Html.DropDownListFor(x=>x.MemberShiptypeId,new SelectList(ViewBag.MemBerList, "Id","Name"),"-Select MemberShip-",new { @class="form-control"})
+    </div>*@
+    <div class="checkbox">
+        <label>@Html.CheckBoxFor(x => x.Customer.IsSubscribeToNewsletter) Subscribe for News letter ?</label>
+    </div>
+    @Html.HiddenFor(x=>x.Customer.Id)
+    <button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-send"></span>Save</button>
+
+}
+

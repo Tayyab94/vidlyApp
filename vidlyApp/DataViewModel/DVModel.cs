@@ -10,6 +10,7 @@ namespace vidlyApp.DataViewModel
     {
         public Movie movie { get; set; }
 
-        public List<Customer> Customer { get; set; }
+      //MoviesListPass
+     
     }
 }

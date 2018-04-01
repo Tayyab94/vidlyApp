@@ -7,7 +7,7 @@ namespace vidlyApp.Models
 {
     public class MemberShiptype
     {
-        public byte Id { get; set; }
+        public int Id { get; set; }
 
         public string Name { get; set; }
         public short SignUpFee { get; set; }
